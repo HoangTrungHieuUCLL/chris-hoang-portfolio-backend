@@ -2,6 +2,7 @@
 safe to re-run whenever a new project needs adding — edit PROJECTS below and re-run."""
 
 from app.database import Base, SessionLocal, engine
+from app.migrate import ensure_schema
 from app.models import Project
 
 PROJECTS = [
@@ -251,6 +252,7 @@ PROJECTS = [
 
 def run():
     Base.metadata.create_all(bind=engine)
+    ensure_schema()
     db = SessionLocal()
     try:
         for data in PROJECTS:
