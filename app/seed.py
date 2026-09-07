@@ -264,11 +264,36 @@ PROJECTS = [
         slug="ai-accessibility-aid",
         name="AI Accessibility Aid for the Visually Impaired",
         description=(
-            "Built a web app, browser extension, and Python tools that combine a "
-            "large language model with OpenCV to help visually impaired users "
-            "understand their surroundings."
+            "Vision is three tools sharing one goal: telling a visually impaired "
+            "person what is in front of them. The web app takes a photo from the "
+            "camera, runs an OpenCV pass that measures unique colours and total "
+            "contour length, and uses that complexity score to pick the model — "
+            "Gemini 2.0 Flash for busy scenes, the cheaper Flash-Lite for simple "
+            "ones. The prompt is written for a screen reader rather than a chat "
+            "window: name the place first, describe people by what they are doing "
+            "before what they look like, order objects nearest to furthest and left "
+            "to right, and stay under twenty seconds read aloud. The description is "
+            "spoken through the Web Speech API, and follow-up questions can be asked "
+            "out loud — where something is, whether it is safe — with the model told "
+            "to treat the photo as the situation in front of the user, estimate "
+            "distances in metres, and call out hazards. A voice command overlays a "
+            "MiDaS depth map to show what is closest. The Chrome extension carries "
+            "the same idea onto the open web: Ctrl-click any image and hear a real "
+            "description, since screen readers otherwise read only whatever alt text "
+            "a developer bothered to write."
         ),
-        tech_stack=["React", "Python", "OpenCV", "LLM"],
+        tech_stack=[
+            "TypeScript",
+            "Next.js",
+            "React",
+            "Express",
+            "Python",
+            "OpenCV",
+            "PyTorch",
+            "MiDaS",
+            "Gemini 2.0 Flash",
+            "Web Speech API",
+        ],
         category="Web Development",
         organization=None,
         year="2024",
