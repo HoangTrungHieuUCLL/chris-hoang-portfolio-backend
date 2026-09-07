@@ -16,6 +16,7 @@ class Project(Base):
     year = Column(String, nullable=False)
     link_url = Column(String, nullable=True)
     link_label = Column(String, nullable=True)
+    repo_url = Column(String, nullable=True)
     image_url = Column(String, nullable=True)
     image_credit_name = Column(String, nullable=True)
     image_credit_url = Column(String, nullable=True)

@@ -14,6 +14,7 @@ class ProjectOut(BaseModel):
     year: str
     link_url: str | None
     link_label: str | None
+    repo_url: str | None
     image_url: str | None
     image_credit_name: str | None
     image_credit_url: str | None
