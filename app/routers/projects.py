@@ -11,11 +11,7 @@ router = APIRouter(prefix="/api/projects", tags=["projects"])
 
 @router.get("", response_model=list[ProjectOut])
 def list_projects(db: Session = Depends(get_db)):
-    return (
-        db.query(Project)
-        .order_by(Project.featured.desc(), asc(Project.sort_order))
-        .all()
-    )
+    return db.query(Project).order_by(asc(Project.sort_order)).all()
 
 
 @router.get("/{slug}", response_model=ProjectOut)
