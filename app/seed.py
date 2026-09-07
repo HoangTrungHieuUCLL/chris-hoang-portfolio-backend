@@ -187,10 +187,32 @@ PROJECTS = [
         slug="football-tactic-prediction",
         name="Football Tactic Prediction Model",
         description=(
-            "Predictive model for OH Leuven that predicts when the opposing team "
-            "switches from a defensive to an attacking shape, with 88% accuracy."
+            "Built with a six-person team at OH Leuven's International Week, on one "
+            "question: how does a side turn winning the ball back into an attack? "
+            "Working from Belgian league event and tracking data, we defined the "
+            "transition window as the 10 seconds before to 5 seconds after a recovery "
+            "or interception, and picked Genk as the case study because they lead the "
+            "league in both shots and ball recoveries. SQL queries against the match "
+            "database feed pitch heatmaps (mplsoccer) showing where Genk win the ball, "
+            "how compact their shape stays at the moment of recovery, and which first "
+            "pass launches the attack. The predictive half is a two-layer PyTorch LSTM "
+            "that reads four frames of tracking data — 22 players plus the ball, 46 "
+            "coordinates per frame — and predicts where everyone moves next, so an "
+            "attack can be anticipated while it is still forming; it is a proof of "
+            "concept, trained end to end on a worked transition rather than a "
+            "match-validated model. A Streamlit dashboard puts any two teams' action "
+            "heatmaps side by side."
         ),
-        tech_stack=["Python", "Machine Learning", "Random Forest"],
+        tech_stack=[
+            "Python",
+            "PyTorch",
+            "LSTM",
+            "PostgreSQL",
+            "pandas",
+            "mplsoccer",
+            "Streamlit",
+            "Tracking Data",
+        ],
         category="Data & ML",
         organization="OH Leuven",
         year="2025",
