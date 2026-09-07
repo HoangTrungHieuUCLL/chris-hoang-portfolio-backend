@@ -145,14 +145,37 @@ PROJECTS = [
         slug="ai-food-recognition",
         name="AI Food Recognition for Calorie Tracking",
         description=(
-            "Built and deployed a Shiny app powered by AI to automatically recognise "
-            "similar food products for a calorie-tracker app's data team."
+            "Admin dashboard for a calorie-tracker app's data team, whose database fills "
+            "up with user-scanned food products that arrive unverified or half-empty. "
+            "Product text is cleaned and merged into one feature (lowercasing, Dutch "
+            "stopword removal, word deduplication, NLTK Porter stemming), vectorised with "
+            "TF-IDF and clustered with cosine-metric DBSCAN, so near-duplicate entries "
+            "surface as ‘alike products’ that the team can merge into a single "
+            "verified record. Built as a Shiny for Python dashboard on top of a Flask REST "
+            "API and a PostgreSQL database: work queues are ordered by scan count so the "
+            "most-scanned products get fixed first, and a comparison view puts two "
+            "products’ text fields and nutrition values side by side with Plotly bar "
+            "and radar charts. Also handled the messy start — repairing multi-layer "
+            "encoding errors in the source CSV and modelling it into the Postgres schema "
+            "the app runs on."
         ),
-        tech_stack=["ShinyPython", "Machine Learning"],
+        tech_stack=[
+            "Python",
+            "Shiny for Python",
+            "Flask",
+            "PostgreSQL",
+            "scikit-learn",
+            "DBSCAN",
+            "TF-IDF",
+            "NLTK",
+            "Plotly",
+            "pandas",
+        ],
         category="Data & ML",
         organization=None,
         year="2025",
-        link_url=None,
+        link_url="https://github.com/HoangTrungHieuUCLL/DataVisualisation_2025-2026_FOOD_teamF3",
+        link_label="View the Code on GitHub",
         image_url="https://images.unsplash.com/photo-1542459550-fb2d04bef698?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
         image_credit_name="NordWood Themes",
         image_credit_url="https://unsplash.com/@nordwood",
