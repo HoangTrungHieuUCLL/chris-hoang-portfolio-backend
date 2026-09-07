@@ -8,7 +8,9 @@ database_url = settings.database_url
 if database_url.startswith("postgres://"):
     database_url = database_url.replace("postgres://", "postgresql://", 1)
 
-engine = create_engine(database_url, pool_pre_ping=True)
+engine = create_engine(
+    database_url, pool_pre_ping=True, connect_args={"connect_timeout": 10}
+)
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 Base = declarative_base()
 
