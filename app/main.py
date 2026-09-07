@@ -1,8 +1,8 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
+from app import seed
 from app.config import settings
-from app.database import Base, engine
 from app.routers import contact, projects
 
 app = FastAPI(title="Chris Hoang Portfolio API", version="1.0.0")
@@ -21,7 +21,9 @@ app.include_router(contact.router)
 
 @app.on_event("startup")
 def on_startup():
-    Base.metadata.create_all(bind=engine)
+    # Creates tables on first boot, then keeps the project list in sync with
+    # seed.py on every deploy — that's the whole "add a project" workflow.
+    seed.run()
 
 
 @app.get("/api/health")
