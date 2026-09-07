@@ -106,14 +106,35 @@ PROJECTS = [
         slug="faulty-gas-bottle-detection",
         name="Faulty Gas Bottle Detection",
         description=(
-            "Went from raw, unlabeled physical inspection photos to a working YOLO "
-            "object-detection model that flags faulty gas bottles on the line."
+            "Real-time computer-vision pipeline that inspects gas bottles moving on a "
+            "conveyor belt, built from raw unlabeled inspection footage: extracted and "
+            "labelled the frames, then trained the models. A fine-tuned YOLO11 detector "
+            "locates each bottle, ByteTrack assigns it a stable ID across frames, and a "
+            "ConvNeXtV2 classifier judges its condition (OK / NOT OK). A second YOLO model "
+            "pinpoints the stamped tarra weight and recertification year, which EasyOCR "
+            "reads after CLAHE contrast enhancement — multi-frame majority voting and regex "
+            "validation stabilise those readings, and any bottle past its recertification "
+            "year is flagged automatically. Ships an annotated output video, a per-bottle "
+            "CSV log, and a Tkinter demo GUI, evaluated against ground truth with a "
+            "confusion matrix and an F3 score that deliberately weights recall over "
+            "precision, since missing a faulty bottle costs far more than a false alarm."
         ),
-        tech_stack=["Python", "YOLO", "Computer Vision"],
+        tech_stack=[
+            "Python",
+            "YOLO11",
+            "Ultralytics",
+            "PyTorch",
+            "ConvNeXtV2",
+            "ByteTrack",
+            "EasyOCR",
+            "OpenCV",
+            "Computer Vision",
+        ],
         category="Data & ML",
         organization="PrimaGaz",
         year="2025",
-        link_url=None,
+        link_url="https://github.com/FurquanMobeen/gass_GASSY",
+        link_label="View the Code on GitHub",
         image_url="https://images.unsplash.com/photo-1730392165436-c00ec1fcb550?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
         image_credit_name="Marco J Haenssgen",
         image_credit_url="https://unsplash.com/@marcohaenssgen",
