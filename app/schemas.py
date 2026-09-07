@@ -13,6 +13,9 @@ class ProjectOut(BaseModel):
     organization: str | None
     year: str
     link_url: str | None
+    image_url: str | None
+    image_credit_name: str | None
+    image_credit_url: str | None
     featured: bool
 
     class Config:
