@@ -75,7 +75,7 @@ PROJECTS = [
         category="Data & ML",
         organization="IKEA Belgium",
         year="2026",
-        link_url="https://frontend-production-176b.up.railway.app",
+        link_url="https://frontend2-production-34d6.up.railway.app",
         link_label="Try the Application",
         image_url="https://images.unsplash.com/photo-1664854953181-b12e6dda8b7c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
         image_credit_name="Resource Database",
