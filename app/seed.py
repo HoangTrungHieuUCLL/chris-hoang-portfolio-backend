@@ -185,7 +185,7 @@ PROJECTS = [
     ),
     dict(
         slug="football-tactic-prediction",
-        name="Football Tactic Prediction Model",
+        name="Defense-to-Offense Transition Analysis",
         description=(
             "Built with a six-person team at OH Leuven's International Week, on one "
             "question: how does a side turn winning the ball back into an attack? "
