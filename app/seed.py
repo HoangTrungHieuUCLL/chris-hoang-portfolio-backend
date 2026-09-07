@@ -12,15 +12,47 @@ PROJECTS = [
             "End-to-end ETL/ELT pipeline for time-series sales data across eight IKEA "
             "Belgium stores, unifying inconsistent systems into one source of truth. "
             "Built ingestion, validation, and transformation stages that catch bad data "
-            "before it reaches anyone downstream, plus the dashboard tooling on top."
+            "before it reaches anyone downstream, powering automated weekly sales forecasts."
         ),
-        tech_stack=["Python", "SQL", "PostgreSQL", "Apache Airflow", "Google Cloud Platform", "Power BI"],
+        tech_stack=["Python", "SQL", "PostgreSQL", "Apache Airflow", "Google Cloud Platform"],
         category="Data & ML",
         organization="IKEA Belgium",
         year="2026",
         link_url=None,
         featured=True,
         sort_order=1,
+    ),
+    dict(
+        slug="store-kpi-dashboard",
+        name="Cross-Store KPI Dashboard",
+        description=(
+            "Tracked down and reconciled inconsistent data from data owners across "
+            "eight IKEA Belgium stores, then built a dashboard giving store managers "
+            "direct access to KPIs and country-average benchmarks."
+        ),
+        tech_stack=["Power BI", "SQL", "Google Cloud Platform"],
+        category="Data & ML",
+        organization="IKEA Belgium",
+        year="2026",
+        link_url=None,
+        featured=False,
+        sort_order=2,
+    ),
+    dict(
+        slug="sales-impact-pricing-analysis",
+        name="Sales Impact Analysis for Service Pricing",
+        description=(
+            "Used machine learning techniques to quantify the impact contribution of "
+            "a proposed new service, providing the analysis that directly informed "
+            "IKEA Belgium's pricing decision."
+        ),
+        tech_stack=["Python", "Machine Learning", "SQL"],
+        category="Data & ML",
+        organization="IKEA Belgium",
+        year="2026",
+        link_url=None,
+        featured=False,
+        sort_order=3,
     ),
     dict(
         slug="ai-talent-matching-system",
@@ -35,7 +67,7 @@ PROJECTS = [
         year="2026",
         link_url=None,
         featured=False,
-        sort_order=2,
+        sort_order=4,
     ),
     dict(
         slug="sales-prediction-app",
@@ -51,7 +83,7 @@ PROJECTS = [
         year="2026",
         link_url=None,
         featured=False,
-        sort_order=3,
+        sort_order=5,
     ),
     dict(
         slug="faulty-gas-bottle-detection",
@@ -66,7 +98,7 @@ PROJECTS = [
         year="2025",
         link_url=None,
         featured=True,
-        sort_order=4,
+        sort_order=6,
     ),
     dict(
         slug="ai-food-recognition",
@@ -81,7 +113,7 @@ PROJECTS = [
         year="2025",
         link_url=None,
         featured=False,
-        sort_order=5,
+        sort_order=7,
     ),
     dict(
         slug="football-tactic-prediction",
@@ -96,7 +128,7 @@ PROJECTS = [
         year="2025",
         link_url=None,
         featured=False,
-        sort_order=6,
+        sort_order=8,
     ),
     dict(
         slug="stroke-occurrence-prediction",
@@ -111,7 +143,7 @@ PROJECTS = [
         year="2025",
         link_url=None,
         featured=True,
-        sort_order=7,
+        sort_order=9,
     ),
     dict(
         slug="belfius-event-management",
@@ -127,7 +159,7 @@ PROJECTS = [
         year="2024",
         link_url=None,
         featured=False,
-        sort_order=8,
+        sort_order=10,
     ),
     dict(
         slug="ai-accessibility-aid",
@@ -143,7 +175,7 @@ PROJECTS = [
         year="2024",
         link_url=None,
         featured=True,
-        sort_order=9,
+        sort_order=11,
     ),
     dict(
         slug="automated-server-monitoring",
@@ -158,7 +190,7 @@ PROJECTS = [
         year="2023",
         link_url=None,
         featured=False,
-        sort_order=10,
+        sort_order=12,
     ),
     dict(
         slug="mario-inspired-game",
@@ -173,7 +205,7 @@ PROJECTS = [
         year="2023",
         link_url=None,
         featured=False,
-        sort_order=11,
+        sort_order=13,
     ),
 ]
 
