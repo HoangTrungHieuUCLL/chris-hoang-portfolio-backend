@@ -1,6 +1,6 @@
 """Adds any model columns missing from an already-existing table.
 
-Base.metadata.create_all() only creates tables that don't exist yet — it never
+Base.metadata.create_all() only creates tables that don't exist yet. It never
 alters an existing table's columns. Since this project has no Alembic setup,
 call ensure_schema() before querying so new fields added to models.py show up
 in the live database automatically on the next deploy.

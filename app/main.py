@@ -22,7 +22,7 @@ app.include_router(contact.router)
 @app.on_event("startup")
 def on_startup():
     # Creates tables on first boot, then keeps the project list in sync with
-    # seed.py on every deploy — that's the whole "add a project" workflow.
+    # seed.py on every deploy. That's the whole "add a project" workflow.
     seed.run()
 
 

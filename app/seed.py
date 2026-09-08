@@ -1,5 +1,5 @@
 """Idempotent seed script: `python -m app.seed`. Upserts projects by slug so it's
-safe to re-run whenever a new project needs adding — edit PROJECTS below and re-run."""
+safe to re-run whenever a new project needs adding: edit PROJECTS below and re-run."""
 
 from app.database import Base, SessionLocal, engine
 from app.migrate import ensure_schema
@@ -112,7 +112,7 @@ PROJECTS = [
             "locates each bottle, ByteTrack assigns it a stable ID across frames, and a "
             "ConvNeXtV2 classifier judges its condition (OK / NOT OK). A second YOLO model "
             "pinpoints the stamped tarra weight and recertification year, which EasyOCR "
-            "reads after CLAHE contrast enhancement — multi-frame majority voting and regex "
+            "reads after CLAHE contrast enhancement. Multi-frame majority voting and regex "
             "validation stabilise those readings, and any bottle past its recertification "
             "year is flagged automatically. Ships an annotated output video, a per-bottle "
             "CSV log, and a Tkinter demo GUI, evaluated against ground truth with a "
@@ -155,7 +155,7 @@ PROJECTS = [
             "API and a PostgreSQL database: work queues are ordered by scan count so the "
             "most-scanned products get fixed first, and a comparison view puts two "
             "products’ text fields and nutrition values side by side with Plotly bar "
-            "and radar charts. Also handled the messy start — repairing multi-layer "
+            "and radar charts. Also handled the messy start: repairing multi-layer "
             "encoding errors in the source CSV and modelling it into the Postgres schema "
             "the app runs on."
         ),
@@ -196,8 +196,8 @@ PROJECTS = [
             "database feed pitch heatmaps (mplsoccer) showing where Genk win the ball, "
             "how compact their shape stays at the moment of recovery, and which first "
             "pass launches the attack. The predictive half is a two-layer PyTorch LSTM "
-            "that reads four frames of tracking data — 22 players plus the ball, 46 "
-            "coordinates per frame — and predicts where everyone moves next, so an "
+            "that reads four frames of tracking data (22 players plus the ball, 46 "
+            "coordinates per frame) and predicts where everyone moves next, so an "
             "attack can be anticipated while it is still forming; it is a proof of "
             "concept, trained end to end on a worked transition rather than a "
             "match-validated model. A Streamlit dashboard puts any two teams' action "
@@ -267,14 +267,14 @@ PROJECTS = [
             "Vision is three tools sharing one goal: telling a visually impaired "
             "person what is in front of them. The web app takes a photo from the "
             "camera, runs an OpenCV pass that measures unique colours and total "
-            "contour length, and uses that complexity score to pick the model — "
+            "contour length, and uses that complexity score to pick the model: "
             "Gemini Flash for busy scenes, the cheaper Flash-Lite for simple "
             "ones. The prompt is written for a screen reader rather than a chat "
             "window: name the place first, describe people by what they are doing "
             "before what they look like, order objects nearest to furthest and left "
             "to right, and stay under twenty seconds read aloud. The description is "
             "spoken through the Web Speech API, and follow-up questions can be asked "
-            "out loud — where something is, whether it is safe — with the model told "
+            "out loud (where something is, whether it is safe), with the model told "
             "to treat the photo as the situation in front of the user, estimate "
             "distances in metres, and call out hazards. A voice command overlays a "
             "MiDaS depth map to show what is closest. The Chrome extension carries "
