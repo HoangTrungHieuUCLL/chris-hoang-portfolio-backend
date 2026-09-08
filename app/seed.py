@@ -268,7 +268,7 @@ PROJECTS = [
             "person what is in front of them. The web app takes a photo from the "
             "camera, runs an OpenCV pass that measures unique colours and total "
             "contour length, and uses that complexity score to pick the model — "
-            "Gemini 2.0 Flash for busy scenes, the cheaper Flash-Lite for simple "
+            "Gemini Flash for busy scenes, the cheaper Flash-Lite for simple "
             "ones. The prompt is written for a screen reader rather than a chat "
             "window: name the place first, describe people by what they are doing "
             "before what they look like, order objects nearest to furthest and left "
@@ -291,13 +291,14 @@ PROJECTS = [
             "OpenCV",
             "PyTorch",
             "MiDaS",
-            "Gemini 2.0 Flash",
+            "Google Gemini",
             "Web Speech API",
         ],
         category="Web Development",
         organization=None,
         year="2024",
-        link_url=None,
+        link_url="https://frontend-production-e783.up.railway.app",
+        link_label="Try the Application",
         image_url="https://images.unsplash.com/photo-1581090122319-8fab9528eaaa?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
         image_credit_name="ThisisEngineering",
         image_credit_url="https://unsplash.com/@thisisengineering",
